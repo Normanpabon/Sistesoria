@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>351</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>usuario
+--
+*id      INT      &lt;PK&gt;*
+codigo_institucional  INT
+nombre     string
+apellido     string
+usuario      string
+correo       string
+rol              INT
+foto_perfil   blob
+hashed_password   string
+
+bg=pink
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>243</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>curso
+--
+*id      INT      &lt;PK&gt;*
+*codigo_asignatura  INT &lt;FK&gt;*
+*codigo_profesor  INT &lt;FK&gt;*
+fecha_cierre     DATE
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>405</y>
+      <w>189</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>asesoria
+--
+*id      INT      &lt;PK&gt;*
+*codigo_curso   INT  &lt;FK&gt;*
+dia     INT
+hora_inicio   TIME
+hora_fin       TIME
+ubicacion      string
+cupos           INT
+
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>45</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>matricula
+--
+*id      INT      &lt;PK&gt;*
+*id_estudiante  INT &lt;FK&gt;*
+*id_curso    INT  &lt;FK&gt;*
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1296</x>
+      <y>243</y>
+      <w>189</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>asignatura
+--
+*codigo_uao      INT      &lt;PK&gt;*
+nombre           string
+creditos          INT
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>945</x>
+      <y>648</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>cita_asesoria
+--
+*id      INT      &lt;PK&gt;*
+*id_asesoria  INT  &lt;FK&gt;*
+*id_estudiante INT &lt;FK&gt;*
+fecha    DATE
+hora_inicio    TIME
+hora_fin        TIME
+aprobada  Boolean
+asistio Boolean
+
+
+
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>702</x>
+      <y>0</y>
+      <w>234</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>Matricula relaciona a
+usuario estudiante con 
+los cursos en los cuales se encuentre
+inscrito
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>603</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>mensaje
+--
+*id      INT      &lt;PK&gt;*
+*id_receptor    INT  &lt;FK&gt;*
+*id_emisor       INT  &lt;FK&gt;*
+mensaje          string
+adjunto            blob
+fecha_envio     DATE
+
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>423</x>
+      <y>261</y>
+      <w>180</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>El rol puede tener como valor
+0 o 1, donde:
+
+0 : profesor
+1 : estudiante
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1143</x>
+      <y>405</y>
+      <w>216</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>El dia de la asesoria
+puede ser un numero
+entre 1 y 7, representando
+el dia de la semana.
+1 = Lunes
+7 = Domingo
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>270</y>
+      <w>270</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+&lt; es dictado por</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>738</x>
+      <y>198</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>(Para ser dictado por
+un usuario, este debe
+tener un rol = 0(profesor))
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1125</x>
+      <y>270</y>
+      <w>189</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+pertenece a una &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>72</y>
+      <w>351</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+puede tener &gt;</panel_attributes>
+    <additional_attributes>20.0;310.0;20.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1026</x>
+      <y>99</y>
+      <w>243</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+&lt; referencia un</panel_attributes>
+    <additional_attributes>120.0;10.0;210.0;10.0;150.0;120.0;10.0;120.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1026</x>
+      <y>315</y>
+      <w>108</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+Puede tener &gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>369</y>
+      <w>171</w>
+      <h>369</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+pide una &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0;70.0;380.0;170.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1170</x>
+      <y>657</y>
+      <w>162</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>(Para pedir una cita
+el usuario debe
+tener un rol = 1(estudiante))
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1026</x>
+      <y>540</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+&lt; se separa en espacio de </panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>369</y>
+      <w>288</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+es enviado por un &gt;</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;10.0;10.0;330.0;60.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>513</y>
+      <w>234</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+es enviado a un &gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;140.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1368</x>
+      <y>162</y>
+      <w>198</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>No se considera la
+facultad de la asignatura
+pues no se considera pertinente
+para el aplicativo
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1161</x>
+      <y>738</y>
+      <w>279</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>La cita se puede crear para
+una asesoria siempre que
+hayan cupos disponibles.
+Para esto se verifican las citas_asesorias
+que tengan id_asesoria igual para 
+el mismo dia y esten aprobadas por el docente,
+luego se resta con los cupos disponibles para
+la asesoria.
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
