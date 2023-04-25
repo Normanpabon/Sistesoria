@@ -17,6 +17,11 @@ public interface UsuarioRepository extends R2dbcRepository<Usuario, Long> {
     @Query("SELECT * FROM usuario WHERE usuario.usuario=:user")
     Mono<Usuario> getUserByUsername(String user);
 
+    // Obtener usuario por codigo institucional
+
+    @Query("SELECT * FROM usuario WHERE usuario.codigo_institucional=:codigo_institucional")
+    Mono<Usuario> getUserByUaoCode(int codigo_institucional);
+
     @Query("SELECT IFNULL( (SELECT usuario.id FROM usuario WHERE usuario.usuario=:user) , -1)")
     Mono<Long> getUserIdByUsername(String user);
 
