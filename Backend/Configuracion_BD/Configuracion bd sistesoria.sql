@@ -14,7 +14,13 @@ GRANT ALL PRIVILEGES ON Sistesoria.* to 'sistesoriaAdmin';
 
 CREATE TABLE Sistesoria.USUARIO(id int AUTO_INCREMENT, codigo_institucional int, nombre varchar(64),
     apellido varchar(64), usuario varchar(64), correo varchar(64), rol int, foto_perfil BLOB,
-    hashed_password varchar(1024), PRIMARY KEY(id),  CONSTRAINT UNQ_username UNIQUE(username, correo, cod_ins));
+    hashed_password varchar(1024), PRIMARY KEY(id),  CONSTRAINT UNQ_username UNIQUE(usuario, correo, codigo_institucional));
+
+/* Crear tabla de usuarios SIN BLOB*/
+
+CREATE TABLE Sistesoria.USUARIO(id int AUTO_INCREMENT, codigo_institucional int, nombre varchar(64),
+    apellido varchar(64), usuario varchar(64), correo varchar(64), rol int, 
+    hashed_password varchar(1024), PRIMARY KEY(id),  CONSTRAINT UNQ_username UNIQUE(usuario, correo, codigo_institucional));
 
 /* Crear tabla de asignatura */
 
