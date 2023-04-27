@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RestController("/V1/asesoria/")
+@RestController
+@RequestMapping("/V1/asesoria/")
 public class AsesoriaController {
 
     @Autowired
@@ -41,7 +42,8 @@ public class AsesoriaController {
     // Crear un nuevo espacio de asesoria
     // Todo: verificar que el rol sea de id 0, solo el profesor puede crear espacio
     // Todo: verificar que el profesor que crea la asesoria sea el mismo a cargo del curso
-    @PostMapping()
+
+    @PostMapping("add/")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Mono<Asesoria> createNewAsesoria(@RequestBody Asesoria asesoria){
         return asesoriaRepository.save(asesoria);

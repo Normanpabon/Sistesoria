@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RestController("/V1/cita/")
+@RestController
+@RequestMapping("/V1/cita_asesoria/")
 public class CitaAsesoriaController {
 
     @Autowired
@@ -42,7 +43,7 @@ public class CitaAsesoriaController {
     // POSTS
 
     // TODO: Verificar que el estudiante y la asesoria existan. Hacer manejo de errores
-    @PostMapping()
+    @PostMapping("")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Mono<CitaAsesoria> addCitaAsesoria(@RequestBody CitaAsesoria citaAsesoria){
         return citaAsesoriaRepository.save(citaAsesoria);

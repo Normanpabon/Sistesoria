@@ -43,7 +43,7 @@ public class CursoController {
     // Todo: Manejo de errores para las llaves foraneas
     // Todo : Verificar
     // Agregar un nuevo curso, se espera JSON segun DTO curso, con los datos
-    @PostMapping("/add")
+    @PostMapping("add")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Mono<Curso> addCurso(@RequestBody Curso curso){
         return cursoRepository.save(curso);

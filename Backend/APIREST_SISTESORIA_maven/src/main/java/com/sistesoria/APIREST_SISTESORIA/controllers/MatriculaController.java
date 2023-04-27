@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@RestController("/V1/matricula/")
+@RestController
+@RequestMapping("/V1/matricula/")
 public class MatriculaController {
 
     @Autowired
@@ -42,7 +43,8 @@ public class MatriculaController {
     // TODO: Manejo de excepcion si no existe el estudiante o el curso a matricular
     // TODO: REVISAR
     // Agrega una nueva matricula, recive json con estructura del DTO Matricula
-    @PostMapping()
+
+    @PostMapping("add/")
     @ResponseStatus(HttpStatus.ACCEPTED)
     Mono<Matricula> saveMatricula(@RequestBody Matricula matricula){
         return matriculaRepository.save(matricula);
