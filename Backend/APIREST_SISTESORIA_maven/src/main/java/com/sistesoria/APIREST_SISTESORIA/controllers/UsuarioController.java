@@ -16,7 +16,7 @@ import com.sistesoria.APIREST_SISTESORIA.controllers.UsuarioController;
 public class UsuarioController {
 
     @Autowired
-    UsuarioRepository usuarioRepository;
+    private UsuarioRepository usuarioRepository;
 
     // crear metodos para api usuarios
 

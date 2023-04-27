@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 public class AsignaturaController {
 
     @Autowired
-    AsignaturaRepository asignaturaRepository;
+    private AsignaturaRepository asignaturaRepository;
 
     // GETS
     // Recuperar asignatura por codigo institucional

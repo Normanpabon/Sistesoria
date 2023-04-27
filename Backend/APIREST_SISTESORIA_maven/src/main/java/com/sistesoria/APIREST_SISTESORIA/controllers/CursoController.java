@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 public class CursoController {
 
     @Autowired
-    CursoRepository cursoRepository;
+    private CursoRepository cursoRepository;
 
     // GETS
 
