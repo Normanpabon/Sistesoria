@@ -1,8 +1,8 @@
 /* SE CREA LA BD*/--
-CREATE SCHEMA 'sistesoriasS';
+CREATE SCHEMA sistesorias;
 
 -- TABLA USUARIOS
-CREATE TABLE sistesoriass.usuario (
+CREATE TABLE sistesorias.usuario (
   ID INT NOT NULL,
   CODIGO_INSTI INT NOT NULL,
   NOMBRE VARCHAR(45) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE sistesoriass.usuario (
   
   
 --TABLA CITA_ASESORIA
-CREATE TABLE sistesoriass.cita_asesoria (
+CREATE TABLE sistesorias.cita_asesoria (
   ID_CITA INT NOT NULL,
   ID_ASESORIA INT NOT NULL,
   ID_ESTUDIANTE INT NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE sistesoriass.cita_asesoria (
   PRIMARY KEY (ID_CITA));
 
 -- TABLA ASESORIAS
-CREATE TABLE sistesoriass.asesoria (
+CREATE TABLE sistesorias.asesoria (
   id_asesoria INT NOT NULL,
   codigo_curso INT NOT NULL,
   DIA INT NOT NULL COMMENT 'EL DÍA DE LA ASESORIA PUEDE SER UN NUMERO ENTRE 1 Y 7 REPRESENTANDO EL DÍA DE LA SEMANA 1=LUNES Y 7=DOMINGO',
