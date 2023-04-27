@@ -24,6 +24,12 @@ CREATE TABLE Sistesoria.USUARIO(id int AUTO_INCREMENT, codigo_institucional int,
 
 /* Crear tabla de asignatura */
 
+CREATE TABLE Sistesoria.asignatura (
+  codigo_uao INT NOT NULL,
+  nombre VARCHAR(45) NOT NULL,
+  creditos INT NOT NULL,
+  PRIMARY KEY (CODIGO_UAO));
+
 
 /* Crear tabla de curso */
 
