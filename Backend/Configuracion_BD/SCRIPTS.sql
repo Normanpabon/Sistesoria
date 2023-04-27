@@ -9,7 +9,7 @@ DROP USER 'sistesoriaAdmin';
 
 CREATE USER 'sistesoriaAdmin' IDENTIFIED BY 'wikitiSistesoria';
 
-GRANT ALL PRIVILEGES ON Sistesoria.* to 'sistesoriaAdmin';
+GRANT ALL PRIVILEGES ON Sistesorias.* to 'sistesoriaAdmin';
 
 /* TABLA USUARIOS */
 CREATE TABLE sistesorias.usuario (
