@@ -1,0 +1,28 @@
+/* insert tabla usuarios*/
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (789012, 'María', 'García', 'magarcia', 'magarcia@example.com', 1, '5f4dcc3b5aa765d61d8327deb882cf99');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (345678, 'Pedro', 'Sánchez', 'pesanchez', 'pesanchez@example.com', 0, '5f4dcc3b5aa765d61d8327deb882cf99');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (901234, 'Laura', 'Hernández', 'lahernandez', 'lahernandez@example.com', 1, 'd8578edf8458ce06fbc5bb76a58c5ca4');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (567890, 'Jorge', 'Martínez', 'jomartinez', 'jomartinez@example.com', 0, '');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (234567, 'Ana', 'Gómez', 'angomez', '', 1, '5f4dcc3b5aa765d61d8327deb882cf99');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO,ROL, HASHED_PASSWORD)
+VALUES (789012, 'Sofía', 'López', 'solopez', 'solopez@example.com',0 ,'5f4dcc3b5aa765d61d8327deb882cf99');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL,NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (90777,'Daniel', 'Ramírez', 'daramirez', 'daramirez@example.com', 0, '5f4dcc3b5aa765d61d8327deb882cf99');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (123456, 'Miguel', 'Torres', 'mitorres','mitorres@example.com',1,'');
+
+INSERT INTO sistesorias.usuario (CODIGO_INSTITUCIONAL, NOMBRE, APELLIDO, USUARIO, CORREO, ROL, HASHED_PASSWORD)
+VALUES (345678, 'Carla', 'Hernández', 'carlah', 'carlah@example.com', 1, '9d4e1e23bd5b727046a9e3b4b7db57bd8d6ee684');
+

@@ -1,0 +1,29 @@
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (101, 'Cálculo I', 4);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE,CREDITOS)
+VALUES (102, 'Física I',4);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, CREDITOS)
+VALUES (103,'POO' 3);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (104),'ED2',3;
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (105, 'Fundamentos de Programación y Algoritmos', 3);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (106, 'Estadística Aplicada', 3);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (107, 'Métodos Numéricos', 4);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (108, 'Ingeniería de Software', 4);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (109, 'Teoría de la Computación', 3);
+
+INSERT INTO sistesorias.asignatura (CODIGO_UAO, NOMBRE, CREDITOS)
+VALUES (110, 'Sistemas Operativos', 4);
