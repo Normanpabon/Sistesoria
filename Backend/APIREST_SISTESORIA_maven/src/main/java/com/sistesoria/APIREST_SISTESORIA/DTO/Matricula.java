@@ -16,9 +16,9 @@ public class Matricula {
     @Id
     private int id;
 
-    @Transient
+    //@Transient
     private int id_estudiante;
 
-    @Transient
+    //@Transient
     private int id_curso;
 }

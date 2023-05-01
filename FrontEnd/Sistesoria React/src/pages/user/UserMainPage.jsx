@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import UserNavBar from "../../components/user/UserNavBar";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/common/Footer";
+import ListaAsignaturas from "../../components/ListaAsignaturas"
 
 function UserMainPage() {
   const { alert, userTitle } = useUser();
@@ -33,6 +34,7 @@ function UserMainPage() {
             </div>
           </div>
           <Outlet />          
+          <ListaAsignaturas />
           <div
             className="tooltip tooltip-left fixed bottom-14 right-2"
             data-tip="Agendar nueva asesoria"

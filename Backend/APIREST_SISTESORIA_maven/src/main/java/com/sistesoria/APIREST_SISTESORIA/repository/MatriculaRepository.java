@@ -10,7 +10,7 @@ import reactor.core.publisher.Flux;
 public interface MatriculaRepository extends R2dbcRepository<Matricula, Long> {
 
     // Encontrar todas las matriculas de un estudiante
-    @Query("SELECT * FROM matricula WHERE matricula.id_estudiante:=idEstudiante")
+    @Query("SELECT * FROM sistesorias.matricula WHERE sistesorias.matricula.id_estudiante:=idEstudiante")
     Flux<Matricula> getMatriculasByEstudianteId(int idEstudiante);
 
     // Recuperar todas las matriculas para el id de un curso

@@ -19,7 +19,7 @@ public class Asesoria {
     @Id
     private int id;
 
-    @Transient
+   // @Transient
     private int codigo_curso;
 
     private int dia;  //Hacer control del rango de 1 a 7

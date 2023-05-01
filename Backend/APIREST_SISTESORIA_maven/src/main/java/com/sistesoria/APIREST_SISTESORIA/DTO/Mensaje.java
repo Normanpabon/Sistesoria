@@ -18,10 +18,10 @@ public class Mensaje {
     @Id
     private int id;
 
-    @Transient
+    //@Transient
     private int id_receptor;
 
-    @Transient
+    //@Transient
     private int id_emisor;
 
     private String mensaje;

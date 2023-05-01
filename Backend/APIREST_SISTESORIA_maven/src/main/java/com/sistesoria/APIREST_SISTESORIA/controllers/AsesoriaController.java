@@ -10,6 +10,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/V1/asesoria/")
 public class AsesoriaController {
 

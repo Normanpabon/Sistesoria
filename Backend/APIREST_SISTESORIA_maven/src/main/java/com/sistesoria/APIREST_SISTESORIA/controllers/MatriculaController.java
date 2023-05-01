@@ -9,15 +9,19 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/V1/matricula/")
 public class MatriculaController {
 
     @Autowired
     private MatriculaRepository matriculaRepository;
 
+
+
     // GETS
 
     // Obtener matriculas actuales de estudiante por su id (PK) (materias matriculadas por estudiante)
+    @Deprecated
     @GetMapping("/estudiante/{id}")
     @ResponseStatus(HttpStatus.OK)
     Flux<Matricula> getMatriculaByIdEstudiante(@PathVariable int id){
@@ -36,6 +40,13 @@ public class MatriculaController {
     @ResponseStatus(HttpStatus.OK)
     Mono<Matricula> getMatriculaById(@PathVariable long id){
         return matriculaRepository.findById(id);
+    }
+
+    // Obtener todas las matriculas
+    @GetMapping("/all")
+    @ResponseStatus(HttpStatus.OK)
+    Flux<Matricula> getAllMatriculas(){
+        return matriculaRepository.findAll();
     }
 
     // POSTS

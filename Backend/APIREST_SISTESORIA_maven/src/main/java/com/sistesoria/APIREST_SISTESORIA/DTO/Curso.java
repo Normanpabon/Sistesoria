@@ -19,10 +19,10 @@ public class Curso {
     private int id;
 
     //Verificar notacion
-    @Transient
+    //@Transient
     private int codigo_asignatura;
 
-    @Transient
+    //@Transient
     private int codigo_profesor;
 
     private Date fecha_cierre;

@@ -12,6 +12,7 @@ import reactor.core.publisher.Mono;
 import com.sistesoria.APIREST_SISTESORIA.controllers.UsuarioController;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/V1/usuario/")
 public class UsuarioController {
 
@@ -55,6 +56,15 @@ public class UsuarioController {
     @ResponseStatus(HttpStatus.OK)
     public Mono<Usuario> getUserByUsername(@PathVariable String user){
         return usuarioRepository.getUserByUsername(user);
+    }
+
+    // Obtener todos los profesores
+
+    @GetMapping("/all/profesores")
+    @ResponseStatus(HttpStatus.OK)
+    public Flux<Usuario> getAllProfesores(){
+        int rolABuscar = 0;
+        return usuarioRepository.getAllProfesores(0);
     }
 
     // Obtener Id (PK) del usuario con su nombre de usuario

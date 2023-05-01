@@ -9,6 +9,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/V1/curso/")
 public class CursoController {
 
@@ -16,6 +17,14 @@ public class CursoController {
     private CursoRepository cursoRepository;
 
     // GETS
+
+
+    // Recuperar todos los cursos
+    @GetMapping("/all")
+    @ResponseStatus(HttpStatus.OK)
+    public Flux<Curso> getAllCursos(){
+        return cursoRepository.findAll();
+    }
 
     // Obtener cursos de profesor
     @GetMapping("prof/{idProfe}")

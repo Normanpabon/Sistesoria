@@ -18,10 +18,10 @@ public class CitaAsesoria {
     @Id
     private int id;
 
-    @Transient
+    //@Transient
     private int id_asesoria;
 
-    @Transient
+    //@Transient
     private int id_estudiante;
 
     private Date fecha;
